@@ -1,0 +1,33 @@
+
+<head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+   <h1> ebay</h1>
+<div class="main-content" ng-controller="signin">
+     <div class="head">
+      <span class="signin"><strong>SigninPage</strong></span>
+       <span class="span2"><a href="/signup"><strong>Register</strong></a></span>
+      </div>
+    <form class="form1">
+        <div class="form-group">
+            <label for="formGroupExampleInput"><strong>UserName</strong></label>
+            <input type="text" class="form-control" name="username" placeholder="Enter your user Name" ng-model="username">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2"><strong>Password</strong></label>
+            <input type="text" class="form-control"  name="password"   placeholder="Enter your password" ng-model="password">
+        </div>
+        <div class="alert alert-danger" ng-hide="invalid_login">
+            <strong>Incorrect username or password</strong>
+        </div>
+        <div class="alert alert-danger" ng-hide="validlogin">
+            <strong>Welcome User to the portal</strong>
+        </div>
+        <input type="submit" class="btn btn-success" ng-click="submit();"
+               value="Login" />
+    </form>
+
+
+</div>
+</body>

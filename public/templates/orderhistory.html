@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Orders Page</title>
+</head>
+<body>
+
+<div class="container "  ng-controller="ordercontroller" ng-init="loadOrders();">
+<p class="header">Recent Orders</p>
+<div class="row">
+    <table class="table table-inverse styletable">
+        <thead>
+        <tr>
+            <th>Orderid</th>
+            <th>Orderdate</th>
+            <th>productid</th>
+            <th>Productdescription</th>
+            <th>OrderedQuantity</th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="value in orderSummary">
+        <tr>
+            <td><input type="text" readonly value="{{value.orderid}}"></td>
+            <td><input type="text"  readonly value="{{value.orderdate}}" /></td>
+            <td><input type="text" readonly value="{{value.productid}}"/></td>
+            <td><input type="text" readonly value="{{value.productdescription}}"/></td>
+            <td><input type="text" readonly value="{{value.orderedquantity}}"/> </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+    <br>
+    <br>
+    <p class="header">Sold Products</p>
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-inverse styletable">
+                <thead>
+                <tr>
+                    <th>Productid</th>
+                    <th>ProductDescription</th>
+                    <th>productName</th>
+                    <th>SellerInformation</th>
+                    <th>QuantitySold</th>
+                </tr>
+                </thead>
+                <tbody ng-repeat="value in soldproducts">
+                <tr>
+                    <td><input type="text" readonly value="{{value.productid}}"></td>
+                    <td><input type="text"  readonly value="{{value.productdescription}}" /></td>
+                    <td><input type="text" readonly value="{{value.productname}}"/></td>
+                    <td><input type="text" readonly value="{{value.sellerinformation}}"/></td>
+                    <td><input type="text" readonly value="{{value.quantity}}"/> </td>
+                </tr>
+                </tbody>
+            </table>
+            <input type="submit" value="sold itemsare " ng-click="loadSoldProducts();" >
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <p class="header">Bidded Orders</p>
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-inverse styletable">
+                <thead>
+                <tr>
+                    <th>ProductDescription</th>
+                    <th>productName</th>
+                    <th>QuantitySold</th>
+
+                </tr>
+                </thead>
+                <tbody ng-repeat="value in soldproducts">
+                <tr>
+                    <td><input type="text"  readonly value="{{value.productdescription}}" /></td>
+                    <td><input type="text" readonly value="{{value.productname}}"/></td>
+                    <td><input type="text" readonly value="{{value.productname}}"/></td>
+
+
+                </tr>
+                </tbody>
+            </table>
+            <input type="submit" value="Bidded Items" ng-click="loadSoldProducts();" >
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

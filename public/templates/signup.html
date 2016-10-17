@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>welcome to signup page</title>
+</head>
+<body >
+<h5 class="p">welcome to signup page </h5>
+<div class="signup-content" ng-controller="signup">
+    <div class="signup-head">
+        <span class="Signup"><strong>SignUpPage</strong></span>
+        <span class="span2"><a href="/signin"><strong>Signin</strong></a></span>
+    </div>
+    <form class="form2">
+        <div class="form-group">
+            <label ><strong>firstname</strong></label>
+             <input type="text" class="form-control" name="firstname" placeholder="firstname" ng-model="forminfo.firstname">
+        </div>
+        <div class="form-group">
+            <label ><strong>lastname</strong></label>
+            <input type="text" class="form-control" name="lastname" placeholder="lastname" ng-model="forminfo.lastname">
+         </div>
+         <div class="form-group">
+             <label ><strong>Password</strong></label>
+             <input type="password"  class="form-control"  name="password"   placeholder="Enter your password" ng-model="forminfo.password">
+          </div>
+          <div class="form-group">
+            <label ><strong>Email</strong></label>
+            <input type="email" class="form-control"  name="email"   placeholder="Enter your email" ng-model="forminfo.email">
+           </div>
+           <input type="submit" class="btn btn-success" ng-click="signupformsubmit();"
+               value="signup" />
+
+        <span ng-show="fieldsRequired">{{fieldsRequired}}</span>
+        <span ng-show="invalidPassword">{{invalidPassword}}</span>
+    </form>
+
+</div>
+</body>
+</html>

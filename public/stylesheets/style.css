@@ -1,0 +1,247 @@
+h1 {
+    text-align:center;
+    font-weight:bold;
+}
+.main-content{
+  width:400px;
+  height:400px;
+  margin: auto;
+  border: 1px solid;
+}
+.head{
+  margin: 30px;
+}
+.signin{
+  padding:30px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 26px;
+  font-family: sans-serif;
+}
+
+.span2{
+  padding:30px;
+}
+.form1{
+  padding:30px;
+  background-color:#D3D3D1;
+}
+
+
+
+a {
+  color: #00B7FF;
+}
+nav
+{
+  color:white;
+  text-align:center;
+  padding:10px;
+}
+
+
+.signup-content{
+
+  width:500px;
+  height:500px;
+  margin: auto;
+  border: 1px solid;
+
+}
+
+.signup-head{
+  margin: 30px;
+}
+.signup{
+  padding:30px;
+}
+
+.form2 {
+
+  padding: 30px;
+  background: #9AB891;
+}
+
+.p
+{
+  text-align:center;
+  font-weight: bold;
+}
+
+
+/*
+
+* profile page styling
+
+*/
+
+.profilecontainer{
+  width:500px;
+   height:400px;
+  margin:auto;
+  background: #F2E6CE;
+  border-radius:10px;
+
+}
+.padding{
+
+  padding:30px;
+}
+
+.add{
+  padding:25px;
+  background: goldenrod;
+  border:1px solid lightblue;
+  border-radius:1px;
+
+}
+
+
+/*
+*  advertisemnt page styling
+*/
+
+.adverisement{
+
+  width:600px;
+  height:600px;
+  margin:auto;
+  background: antiquewhite;
+  border-radius:10px;
+}
+/*
+* home page styling
+*/
+
+h2{
+  padding:5px;
+  text-align:center;
+}
+
+.flex-container{
+    display:flex;
+ flex-direction: row;
+ flex-wrap:wrap;
+  justify-content:space-around;
+
+}
+
+.firstproduct{
+         margin:0 auto;
+         padding:10px;
+         width:400px;
+        height:200px;
+        background-image:url("http://localhost:3000/images/HomepageImage.jpg");
+        background-repeat:no-repeat;
+        background-size: cover;
+}
+.item{
+  padding:5px;
+  width:200px;
+  height:150px;
+  margin-top:10px;
+  background-image:url("http://localhost:3000/images/nikeshoes.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  color:white;
+}
+.bid{
+  float:right;
+  padding-top:2px;
+  border:1px;
+}
+
+
+/*
+*  cart styling
+*/
+
+.cartbody{
+
+
+}
+
+
+.styletable{
+  background: #ffc087;
+}
+.header{
+  font-weight: bold;
+  font-family: "Baskerville Old Face";
+  line-height: 10px;
+   padding:10px;
+  font-size:15px;
+   text-align:center;
+   color:dimgray;
+    }
+
+a[ui-sref="checkout"]{
+    margin:5px;
+    padding:10px;
+    background:chocolate ;
+    color:black;
+    font-family: "Baskerville Old Face";
+    font-weight: bold;
+}
+
+a[ui-sref="homepage"]
+{
+    margin:5px;
+    padding:10px;
+    background:darkcyan ;
+    color:antiquewhite;
+    font-family: "Baskerville Old Face";
+    font-weight: bold;
+}
+
+
+/*
+*  checkout page related styling
+**/
+
+
+.checkout{
+    padding:30px;
+    width:600px;
+    height:500px;
+    margin:auto;
+    background: aquamarine;
+    border-radius: 5px;
+}
+
+
+.checkheading{
+
+    text-align: center;
+    font-weight: bold;
+    font-family: "Baskerville Old Face";
+    font-size: larger;
+    color:dimgray;
+    padding:20px;
+
+
+}
+
+
+
+/*bidding page
+*/
+
+.bidproduct{
+    margin:0 auto;
+    padding:10px;
+    width:500px;
+    height:300px;
+    background-image:url("http://localhost:3000/images/bidimage.png");
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+
+.bidclass{
+
+    width:100%;
+    height:100px;
+    background: violet;
+
+}

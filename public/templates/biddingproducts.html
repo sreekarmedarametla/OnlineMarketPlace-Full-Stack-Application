@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome to bidding page</title>
+</head>
+<body>
+<div ng-controller="bidpage" ng-init="getBidProducts();">
+<p class="header">products available for bidding are</p>
+    <p>Bidding Started on {{bidstartdate}}</p>
+    <p> Biddin Ends on {{bidenddate}}</p>
+    <br>
+    <br>
+    <div  class="flex-container" >
+        <div class="col-md-4" ng-repeat="product in bidProductdata" >
+            <img src="http://localhost:3000/images/bidimage.png" style="height:200px; width:200px">
+            <h3>{{product.productname}}</h3>
+            <h4>BasePrice: {{product.productprice}}USD</h4>
+        <input type="number" placeholder="Enter your bid price"  ng-model="userbidprice">
+        <button type="button" class="btn btn-primary" ng-click="bidProduct(product,userbidprice);">Bid It</button>
+        <br>
+        {{result}}
+        </div>
+      </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shopping cart</title>
+</head>
+<body>
+
+<div class="container "  ng-controller="cartcontroller" ng-init="loadCart()" >
+    <p class="header">Welcome to Cart</p>
+     <div class="row">
+
+         <table class="table table-inverse styletable">
+             <thead>
+             <tr>
+                 <th scope="row">Item</th>
+                 <th>Price</th>
+                 <th>Quantity</th>
+                 <th>Total</th>
+                  <th>Delete from cart</th>
+             </tr>
+             </thead>
+             <tbody ng-repeat="value in cartData">
+             <tr>
+                 <td class="description">{{value.productdescription}}</td>
+                 <td><input type="text"  readonly value="{{value.productprice}}" /></td>
+                 <td><input type="number" ng-change="calculateTotal(quantitySelc,value)" ng-model="quantitySelc" value="1" /></td>
+                 <td><input type="text" readonly value="{{value.productprice*quantitySelc}}"/> </td>
+                 <td><input type="button" value="delete"  ng-click="deleteItem(value);"> </td>
+             </tr>
+             </tbody>
+         </table>
+ </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <label>Total Price</label>
+            <input type="text"  readonly value="{{totalprice}}">
+        </div>
+        <div class="col-xs-6">
+            <a ui-sref="checkout">proceed to checkout</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-xs-4">
+            </div>
+        <div class="col-xs-4">
+            <a ui-sref="homepage">continue shopping</a>
+              </div>
+         </div>
+
+
+    </div>
+
+</body>
+</html>

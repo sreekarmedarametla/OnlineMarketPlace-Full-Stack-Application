@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>checkoutpage</title>
+</head>
+<body>
+   <p class="checkheading">Please enter your card details</p>
+<div class="checkout" ng-controller="cardController">
+          <div class ="form-group">
+              <label>creditcardnumber</label>
+               <input type="text" class="form-control"  placeholder="Enter card number" ng-model="creditCardNumber">
+           </div>
+    <div class ="form-group">
+    <label>expiry date</label>
+    <input type="date" class="form-control"  placeholder="Enter expiry date" ng-model="productname">
+     </div>
+     <div class="form-group">
+    <label>cvv</label>
+    <input type="text" class="form-control" placeholder="enter 3 digit cvv" ng-model="cvv">
+    </div>
+    <div class="form-group">
+        <button type="submit" ng-click="validateCard();" >click here to pay</button>
+    </div>
+    <span ng-show="cvvvalue">{{cvvvalue}}</span>
+    <span ng-show="cardnumbervalue">{{cardnumbervalue}}</span>
+
+</div>
+</body>
+</html>

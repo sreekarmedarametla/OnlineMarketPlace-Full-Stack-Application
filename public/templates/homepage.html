@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2><strong>Welcome to Ebay  </strong></h2>
+<div  ng-controller="home" ng-init="loadData();">
+    <div  class="row" ng-controller="product" style="margin-left:20px;">
+           <div class="col-md-3" ng-repeat="product in data"  >
+          <img src="http://localhost:3000/images/image.jpg" style="height:100px; width:100px">
+               <br>
+            {{product.productdescription}}
+               <br>
+            <h3>{{product.productname}}</h3>
+               <br>
+            <h4>Price:{{product.productprice}}</h4>
+               <input type="submit" value="Add to Cart" class="btn btn-success" ng-click="getProduct(product)">
+           </div>
+       </div>
+
+        </div>
+
+</div>
+</body>
+</html>
